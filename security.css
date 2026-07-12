@@ -1,0 +1,69 @@
+/* Extra scene-specific polish for the security-checks slide. */
+
+@media (max-width: 850px) {
+  /* Security scene: keep cards, icons and counter separated on phones. */
+  .stage:has([style*="top:88px"][style*="display:grid"]) {
+    min-height: 410px;
+  }
+
+  .stage div[style*="top:88px"][style*="display:grid"] {
+    top: 60px !important;
+    left: 34% !important;
+    right: 6% !important;
+    gap: 8px !important;
+    font-size: 11.5px !important;
+    z-index: 5 !important;
+  }
+
+  .stage div[style*="top:88px"][style*="display:grid"] > div {
+    min-height: 42px;
+    padding: 8px 10px !important;
+    display: flex;
+    align-items: center;
+  }
+
+  .stage div[style*="left:7%"][style*="font-size:clamp(58px"] {
+    bottom: 82px !important;
+    font-size: 64px !important;
+    z-index: 3 !important;
+  }
+
+  .stage div[style*="bottom:76px"][style*="font-size:clamp(34px"] {
+    bottom: 66px !important;
+    left: 39% !important;
+    right: 7% !important;
+    font-size: 36px !important;
+    z-index: 4 !important;
+  }
+}
+
+@media (max-width: 430px) {
+  .stage:has([style*="top:88px"][style*="display:grid"]) {
+    min-height: 420px;
+  }
+
+  .stage div[style*="top:88px"][style*="display:grid"] {
+    top: 58px !important;
+    left: 33% !important;
+    right: 5% !important;
+    gap: 8px !important;
+    font-size: 11px !important;
+  }
+
+  .stage div[style*="top:88px"][style*="display:grid"] > div {
+    min-height: 43px;
+    padding: 8px 9px !important;
+  }
+
+  .stage div[style*="left:7%"][style*="font-size:clamp(58px"] {
+    bottom: 84px !important;
+    font-size: 62px !important;
+  }
+
+  .stage div[style*="bottom:76px"][style*="font-size:clamp(34px"] {
+    bottom: 68px !important;
+    left: 40% !important;
+    right: 7% !important;
+    font-size: 34px !important;
+  }
+}
