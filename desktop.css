@@ -32,22 +32,55 @@
     margin-bottom: 10px;
   }
 
-  /* Work report scene: keep the robot and the produced results separated. */
+  /* Refine scene: robot stays left, clickable items stay right. */
+  .stage:has(#scan) .robot {
+    left: 10% !important;
+    bottom: 88px !important;
+    width: 150px !important;
+    z-index: 2;
+  }
+
+  .stage:has(#scan) #scan {
+    right: 7% !important;
+    top: 78px !important;
+    width: 330px !important;
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+    z-index: 4;
+  }
+
+  .stage:has(#scan) .fruit {
+    width: 150px;
+    height: 132px;
+    font-size: 44px;
+    background: rgba(255,255,255,.11);
+  }
+
+  .stage:has(#scan) .fruit span {
+    font-size: 13px;
+    bottom: 12px;
+  }
+
+  /* Work report scene: keep robot, results and error label separated. */
   .stage [style*="font-size:58px"] {
-    right: 9% !important;
-    bottom: 185px !important;
-    font-size: 56px !important;
-    letter-spacing: .45em;
+    left: 48% !important;
+    right: auto !important;
+    bottom: 190px !important;
+    width: 45% !important;
+    font-size: 52px !important;
+    letter-spacing: .35em;
     white-space: nowrap;
+    text-align: center;
     z-index: 3;
   }
 
   .stage [style*="color:#ff7aa8"] {
-    left: 38% !important;
-    right: 6% !important;
-    bottom: 125px !important;
+    left: 42% !important;
+    right: 7% !important;
+    bottom: 118px !important;
     text-align: center;
-    font-size: 17px;
+    font-size: 16px;
     line-height: 1.2;
     z-index: 4;
     background: rgba(30, 10, 45, .58);
@@ -59,30 +92,47 @@
 
   .stage:has([style*="font-size:58px"]) .robot {
     left: 11% !important;
-    bottom: 94px !important;
-    width: 148px !important;
+    bottom: 90px !important;
+    width: 140px !important;
     z-index: 2;
   }
 }
 
 @media (min-width: 851px) and (max-width: 1180px) {
+  .stage:has(#scan) .robot {
+    width: 128px !important;
+    left: 8% !important;
+  }
+
+  .stage:has(#scan) #scan {
+    right: 5% !important;
+    width: 300px !important;
+    gap: 14px;
+  }
+
+  .stage:has(#scan) .fruit {
+    width: 136px;
+    height: 122px;
+    font-size: 39px;
+  }
+
   .stage [style*="font-size:58px"] {
-    right: 6% !important;
-    bottom: 178px !important;
-    font-size: 46px !important;
-    letter-spacing: .28em;
+    left: 46% !important;
+    bottom: 184px !important;
+    font-size: 44px !important;
+    letter-spacing: .22em;
   }
 
   .stage [style*="color:#ff7aa8"] {
-    left: 32% !important;
+    left: 39% !important;
     right: 5% !important;
-    bottom: 120px !important;
-    font-size: 15px;
+    bottom: 114px !important;
+    font-size: 14px;
   }
 
   .stage:has([style*="font-size:58px"]) .robot {
-    width: 130px !important;
-    left: 9% !important;
+    width: 126px !important;
+    left: 8% !important;
   }
 }
 
