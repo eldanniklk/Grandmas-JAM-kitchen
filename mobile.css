@@ -196,11 +196,33 @@
     inset: auto !important;
     width: 100% !important;
     margin: 0 !important;
-    padding: 142px 12px 12px !important;
+    padding: 118px 12px 12px !important;
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 10px;
     justify-content: initial;
+    z-index: 2;
+  }
+
+  .stage:has(#scan) {
+    min-height: 395px;
+  }
+
+  .stage:has(#scan) .robot {
+    top: 16px;
+    left: 50%;
+    bottom: auto;
+    width: min(24vw, 86px);
+    transform: translateX(-50%);
+    z-index: 1;
+    opacity: .95;
+    pointer-events: none;
+  }
+
+  .stage:has(#scan) .fruit {
+    height: 92px;
+    background: rgba(255, 255, 255, .13);
+    z-index: 3;
   }
 
   .fruit {
@@ -318,7 +340,20 @@
   }
 
   #scan {
-    padding-top: 126px !important;
+    padding-top: 104px !important;
+  }
+
+  .stage:has(#scan) {
+    min-height: 375px;
+  }
+
+  .stage:has(#scan) .robot {
+    width: min(22vw, 76px);
+    top: 14px;
+  }
+
+  .stage:has(#scan) .fruit {
+    height: 86px;
   }
 
   .fruit {
@@ -352,4 +387,12 @@
   .jar { width: 102px; }
   .box { width: 126px; }
   .duck { width: 112px; }
+
+  #scan {
+    padding-top: 96px !important;
+  }
+
+  .stage:has(#scan) .robot {
+    width: 68px;
+  }
 }
