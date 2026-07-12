@@ -62,39 +62,48 @@
     bottom: 12px;
   }
 
-  /* Work report scene: keep robot, results and error label separated. */
+  /* Work report scene: robot left, three accepted fruits fully visible, error centered on the counter. */
+  .stage:has([style*="font-size:58px"]) {
+    overflow: hidden;
+  }
+
+  .stage:has([style*="font-size:58px"]) .robot {
+    left: 10% !important;
+    bottom: 88px !important;
+    width: 136px !important;
+    z-index: 2;
+  }
+
   .stage [style*="font-size:58px"] {
-    left: 48% !important;
+    left: 42% !important;
     right: auto !important;
-    bottom: 190px !important;
-    width: 45% !important;
-    font-size: 52px !important;
-    letter-spacing: .35em;
+    bottom: 168px !important;
+    width: 42% !important;
+    font-size: 50px !important;
+    letter-spacing: .28em;
     white-space: nowrap;
     text-align: center;
     z-index: 3;
   }
 
   .stage [style*="color:#ff7aa8"] {
-    left: 42% !important;
-    right: 7% !important;
-    bottom: 118px !important;
+    left: 8% !important;
+    right: 8% !important;
+    bottom: 54px !important;
+    height: 54px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     text-align: center;
     font-size: 16px;
-    line-height: 1.2;
-    z-index: 4;
-    background: rgba(30, 10, 45, .58);
-    border: 1px solid rgba(255, 255, 255, .12);
-    border-radius: 999px;
-    padding: 8px 12px;
-    backdrop-filter: blur(6px);
-  }
-
-  .stage:has([style*="font-size:58px"]) .robot {
-    left: 11% !important;
-    bottom: 90px !important;
-    width: 140px !important;
-    z-index: 2;
+    line-height: 1.15;
+    z-index: 5;
+    background: transparent;
+    border: 0;
+    border-radius: 0;
+    padding: 0 18px;
+    backdrop-filter: none;
+    color: #ff7aa8 !important;
   }
 }
 
@@ -116,23 +125,22 @@
     font-size: 39px;
   }
 
+  .stage:has([style*="font-size:58px"]) .robot {
+    width: 124px !important;
+    left: 8% !important;
+  }
+
   .stage [style*="font-size:58px"] {
-    left: 46% !important;
-    bottom: 184px !important;
-    font-size: 44px !important;
-    letter-spacing: .22em;
+    left: 43% !important;
+    bottom: 172px !important;
+    width: 41% !important;
+    font-size: 42px !important;
+    letter-spacing: .18em;
   }
 
   .stage [style*="color:#ff7aa8"] {
-    left: 39% !important;
-    right: 5% !important;
-    bottom: 114px !important;
+    bottom: 54px !important;
     font-size: 14px;
-  }
-
-  .stage:has([style*="font-size:58px"]) .robot {
-    width: 126px !important;
-    left: 8% !important;
   }
 }
 
@@ -163,5 +171,13 @@
   .screen.full .map div {
     padding: 10px;
     font-size: 14px;
+  }
+
+  .stage [style*="font-size:58px"] {
+    bottom: 158px !important;
+  }
+
+  .stage [style*="color:#ff7aa8"] {
+    bottom: 50px !important;
   }
 }
