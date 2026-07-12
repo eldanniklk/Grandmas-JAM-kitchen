@@ -1,4 +1,4 @@
-/* Desktop overflow fixes for the final reveal screen. */
+/* Desktop overflow fixes and scene-specific layout polish. */
 @media (min-width: 851px) {
   .screen.full {
     max-height: calc(100dvh - 136px);
@@ -30,6 +30,59 @@
 
   .screen.full .btn {
     margin-bottom: 10px;
+  }
+
+  /* Work report scene: keep the robot and the produced results separated. */
+  .stage [style*="font-size:58px"] {
+    right: 9% !important;
+    bottom: 185px !important;
+    font-size: 56px !important;
+    letter-spacing: .45em;
+    white-space: nowrap;
+    z-index: 3;
+  }
+
+  .stage [style*="color:#ff7aa8"] {
+    left: 38% !important;
+    right: 6% !important;
+    bottom: 125px !important;
+    text-align: center;
+    font-size: 17px;
+    line-height: 1.2;
+    z-index: 4;
+    background: rgba(30, 10, 45, .58);
+    border: 1px solid rgba(255, 255, 255, .12);
+    border-radius: 999px;
+    padding: 8px 12px;
+    backdrop-filter: blur(6px);
+  }
+
+  .stage:has([style*="font-size:58px"]) .robot {
+    left: 11% !important;
+    bottom: 94px !important;
+    width: 148px !important;
+    z-index: 2;
+  }
+}
+
+@media (min-width: 851px) and (max-width: 1180px) {
+  .stage [style*="font-size:58px"] {
+    right: 6% !important;
+    bottom: 178px !important;
+    font-size: 46px !important;
+    letter-spacing: .28em;
+  }
+
+  .stage [style*="color:#ff7aa8"] {
+    left: 32% !important;
+    right: 5% !important;
+    bottom: 120px !important;
+    font-size: 15px;
+  }
+
+  .stage:has([style*="font-size:58px"]) .robot {
+    width: 130px !important;
+    left: 9% !important;
   }
 }
 
