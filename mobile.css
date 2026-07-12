@@ -248,12 +248,18 @@
   }
 
   .stage [style*="color:#ff7aa8"] {
-    left: 12px !important;
-    right: 12px !important;
-    bottom: 90px !important;
+    left: 7% !important;
+    right: 7% !important;
+    bottom: 38px !important;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     text-align: center;
     font-size: 12px;
-    line-height: 1.2;
+    line-height: 1.15;
+    z-index: 6;
+    pointer-events: none;
   }
 
   .stage .jar[style*="left:70px"] {
