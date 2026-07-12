@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Grandma's JAM Kitchen</title>
-  <meta name="description" content="A playful interactive explainer for the JAM service flow: Work Packages, Work Items, Refine, Work Reports, Accumulate and onTransfer.">
+  <meta name="description" content="A playful interactive explainer for the JAM service flow: Work Packages, Work Items, Refine, Work Reports, Guarantees, Assurances, Judgments, Accumulate and onTransfer.">
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="mobile.css">
   <link rel="stylesheet" href="desktop.css">
@@ -13,7 +13,7 @@
   <div class="app">
     <div class="top">
       <div class="brand">Grandma's <b>JAM</b> Kitchen</div>
-      <div class="pill" id="lvl">Level 1 / 9</div>
+      <div class="pill" id="lvl">Level 1 / 10</div>
       <button class="mini" id="nerdTop">Nerd mode</button>
     </div>
     <main id="main"></main>
@@ -26,8 +26,8 @@
   <div class="modal" id="modal">
     <div class="card">
       <h2 style="font-size:42px">Nerd mode</h2>
-      <p class="copy"><b>JAM</b> is the Join-Accumulate Machine. A <code>work package</code> is prepared before Refine and contains one or more <code>work items</code>. <code>Refine</code> runs mostly stateless service code over each item and yields <code>work results</code>. A package's results form a <code>work report</code>, which is checked through guarantees, assurances and possible judgments. <code>Accumulate</code> then folds accepted results into the service state. <code>onTransfer</code> handles incoming messages or tokens from other services asynchronously.</p>
-      <p class="copy">This is an educational simplification. Mental model: package → refine → report → checks → accumulate. Exact JAM implementation details may evolve.</p>
+      <p class="copy"><b>JAM</b> is the Join-Accumulate Machine. A <code>work package</code> is prepared before Refine and contains one or more <code>work items</code>. <code>Refine</code> runs mostly stateless service code over each item and yields <code>work results</code>. A package's results form a <code>work report</code>. Before <code>Accumulate</code>, the report goes through the security layer: <code>guarantees</code> commit validators to the report's correctness, <code>assurances</code> signal that the required chunks are available, and <code>judgments</code> handle reports that may be wrong. <code>Accumulate</code> then folds accepted results into the service state. <code>onTransfer</code> handles incoming messages or tokens from other services asynchronously.</p>
+      <p class="copy">This is an educational simplification. Mental model: package → refine → report → guarantees / assurances / judgments → accumulate. Exact JAM implementation details may evolve.</p>
       <button class="btn" id="close">Close</button>
     </div>
   </div>
