@@ -6,11 +6,12 @@
     min-height: 420px;
   }
 
+  /* Cards: lower and centered in the upper-middle area, with clear space below the shelf. */
   .stage div[style*="top:88px"][style*="display:grid"] {
-    top: 52px !important;
-    left: 34% !important;
+    top: 82px !important;
+    left: 28% !important;
     right: 7% !important;
-    gap: 8px !important;
+    gap: 9px !important;
     font-size: 11.5px !important;
     z-index: 5 !important;
   }
@@ -50,8 +51,8 @@
   }
 
   .stage div[style*="top:88px"][style*="display:grid"] {
-    top: 50px !important;
-    left: 33% !important;
+    top: 80px !important;
+    left: 27% !important;
     right: 5% !important;
     gap: 8px !important;
     font-size: 10.8px !important;
@@ -79,7 +80,8 @@
 
 @media (max-width: 360px) {
   .stage div[style*="top:88px"][style*="display:grid"] {
-    left: 32% !important;
+    top: 76px !important;
+    left: 26% !important;
     right: 4% !important;
     font-size: 10px !important;
   }
